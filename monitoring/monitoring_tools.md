@@ -5,6 +5,9 @@ I shortlisted the following tools
 - [Yahoo CMAK](https://github.com/yahoo/CMAK)
 - [Kafdrop](https://github.com/obsidiandynamics/kafdrop)
 - [Burrow](https://github.com/linkedin/Burrow)
+- [Kowl WebUI](https://github.com/cloudhut/kowl)
+
+**NOTE** - [Kafkacat](https://github.com/edenhill/kafkacat) is an OSS alternative to kafka CLI.
 
 ---
 
