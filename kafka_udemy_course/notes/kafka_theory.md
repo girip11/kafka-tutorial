@@ -74,7 +74,7 @@
 
 - Every kafka broker is also a bootstrap server.
 - Each broker knows about all the other brokers, topics and partitions
-- When we connect to any broker, the kafka client(producer or consumer) will make a metada request. Connected broker will publish list of all brokers and their IP addresses to the kafka client.
+- When we connect to any broker, the kafka client(producer or consumer) will make a metadata request. Connected broker will publish list of all brokers and their IP addresses to the kafka client.
 
 ## Zookeeper
 
@@ -92,4 +92,3 @@
 - Messages are appended to partitions in the order in which they are received by the brokers.
 - Consumers read the messages in the same order in which they are written in the partitions.
 - If replication factor is N, then producers and consumers can tolerate N-1 broker failures(atleast one is available)
--
