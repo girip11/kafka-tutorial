@@ -48,6 +48,14 @@
 - Key to partition mapping is done using key hashing.
 - Key to partition mapping could change when we increase or decrease the partition count.
 
+### Custom Partitioning
+
+- If a producer provides a partition number in the message record, use it.
+- If a producer doesn’t provide a partition number, but it provides a key, choose a partition based on a hash value of the key.
+- When no partition number or key is present, pick a partition in a round-robin fashion.
+
+**NOTE**- The **default partitioner** uses the hash value of the key and the total number of partitions on a topic to determine the partition number. **If you increase a partition number, then the default partitioner will return different numbers evenly if you provide the same key**. By using a custom partitioner we can manage the key to the partition mapping logic.
+
 ## Consumers
 
 - Read messages from the Kafka topics.
@@ -92,3 +100,9 @@
 - Messages are appended to partitions in the order in which they are received by the brokers.
 - Consumers read the messages in the same order in which they are written in the partitions.
 - If replication factor is N, then producers and consumers can tolerate N-1 broker failures(atleast one is available)
+
+---
+
+## References
+
+- [Custom partitioning in Kafka](https://dzone.com/articles/custom-partitioner-in-kafka-lets-take-quick-tour)
